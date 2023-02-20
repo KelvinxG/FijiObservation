@@ -1,3 +1,15 @@
+
+Functionality 
+
 ✓ create a form for the user to upload a file
 ×  store a file in the system
-   visualize a data in chart
+×   visualize a data in chart
+
+Design / UI
+
+✓ Banner unifished but getting started
+
+Configuration
+
+× change database to postgres 
+
