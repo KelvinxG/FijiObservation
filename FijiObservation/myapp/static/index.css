@@ -1,0 +1,11 @@
+body{
+    background-color: black;
+}
+.user-upload{
+
+    background-color: blue;
+    display:flex;
+    text-align: center;
+    margin-left: auto;
+    margin-top: 15px;
+}
