@@ -1,15 +1,19 @@
 
 Functionality 
 
-✓ create a form for the user to upload a file
-×  store a file in the system
-×   visualize a data in chart
+[✓] create a form for the user to upload a file
+[✓] store a file in the system (database)
+    [] get a file's name
+[×]visualize a data in chart
+    [] select which file to visualize
+    [] display multiple kind of graphs
 
 Design / UI
 
-✓ Banner unifished but getting started
+[✓] Banner unifished but getting started
 
 Configuration
 
-× change database to postgres 
+[×] change database to postgres
+[✓] .envfile
 

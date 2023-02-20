@@ -1,0 +1,46 @@
+body,html {
+    height:100%;
+}
+.container {
+    min-height:100%;
+}
+.user-upload{
+
+    background-color: rgba(157, 124, 247, 0.719);
+    display:flex;
+    text-align: center;
+    margin-left: auto;
+    margin-top: 15px;
+}
+.footer {
+    height:200px;
+    margin-top:40px;
+
+}
+
+.banner h1{
+    color:blueviolet;
+
+
+    
+}
+.banner p{
+    color:black;
+    font-weight: bold;
+}
+
+.banner{
+    height:100%;
+    margin-top: 5rem;
+    margin-right: auto;
+    margin-left: 150px;
+    background-image: url('https://img.freepik.com/free-vector/data-centers-are-data-centers-serve-applications-supporting-business-information-cloud-computing-technology-business-analysis-analytics-research-strategy-statistic-planning-marketing_1150-55220.jpg?w=1480&t=st=1676880776~exp=1676881376~hmac=a91ee1645daf08c3f57125953a9eb494f9afb0d58ec3b34effde5a1c8f8d0c40');
+
+    
+}
+
+.button{
+    margin-top: 2rem;
+}
+
+

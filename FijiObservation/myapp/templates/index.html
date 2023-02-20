@@ -9,21 +9,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
     <title>Document</title>
 </head>
 <body>
+    <div class="banner">
+        <h1>
+            Welcome to Fiji Observation project
+        </h1>
+        <p>Behind every weather forecast, every early warning of life-threatening hazards, and every long-term climate change projection are observational data.</p>
 
-    <div class="user-upload" >
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{form.as_p}}
-            <label>Upload your files </label>
-            <p>acceptable file formats csv,json,excel </p>
-            <button type="submit">Upload your file</button>
-        </form>
+        <button type="button" class="btn btn-primary btn-lg" a href="#user-upload">Get started</button>
+
+
+        <img class="img-banner" src="">
     </div>
+    <div class="container">
     
+        <div class="user-upload" id="user-upload" >
+            <form action ="/" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{form.as_p}}
+                <label>Upload your files </label>
+                <p>upload your csv or excel file </p>
+                <button type="submit">upload my file</button>
+            </form>
+
+            {% for message in messages %}
+                {{message}}
+            {% endfor %}
+        </div>
+
+        <p>See all my files</p>
+
+        {% for doc in files %}
+
+        <li>{{doc.file.filename}}</li>
+
+        {% endfor %}
+
+
+
+
+        <button class="btn btn-primary visualizer" a href="{% url 'visualizer' %}>visualize me!</p>"> visualize me!</button>
+   </div>
 </body>
+
+
 </html>
 {% endblock %}
