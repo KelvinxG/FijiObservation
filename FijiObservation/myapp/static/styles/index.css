@@ -10,6 +10,7 @@ body,html {
     display:flex;
     text-align: center;
     margin-left: auto;
+    margin-right: auto;
     margin-top: 15px;
 }
 .footer {
@@ -30,15 +31,18 @@ body,html {
 }
 
 .banner{
-    height:100%;
+    height:650px;
     margin-top: 5rem;
     margin-right: auto;
     margin-left: 150px;
-    background-image: url('https://img.freepik.com/free-vector/data-centers-are-data-centers-serve-applications-supporting-business-information-cloud-computing-technology-business-analysis-analytics-research-strategy-statistic-planning-marketing_1150-55220.jpg?w=1480&t=st=1676880776~exp=1676881376~hmac=a91ee1645daf08c3f57125953a9eb494f9afb0d58ec3b34effde5a1c8f8d0c40');
+    /* background-image: url('https://img.freepik.com/free-vector/data-centers-are-data-centers-serve-applications-supporting-business-information-cloud-computing-technology-business-analysis-analytics-research-strategy-statistic-planning-marketing_1150-55220.jpg?w=1480&t=st=1676880776~exp=1676881376~hmac=a91ee1645daf08c3f57125953a9eb494f9afb0d58ec3b34effde5a1c8f8d0c40'); */
+    
 
     
 }
-
+.visualize-me{
+    margin-top: 15px;
+}
 .button{
     margin-top: 2rem;
 }

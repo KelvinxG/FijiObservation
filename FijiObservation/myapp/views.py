@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect,HttpResponse
+from django.shortcuts import render,redirect,HttpResponse,HttpResponseRedirect
 from .forms import UserForm
 from .models import Parameter,Observation,Station,FileUpload
 from django.contrib import messages
@@ -14,17 +14,10 @@ def index(request):
             #read the file from request
             file = request.FILES['file']
             #display a message after the file is successfully uploaded
-            
-
             created_file=FileUpload.objects.create(file=file)
             created_file.save()
             
             messages.success(request, 'File uploaded successfully')
-
-
-            allfilesavailable=request.FILES.getlist('file')
-            for f in request.FILES.getlist('file'):
-                print(str(f))
             
 
             if file.name.endswith('.csv'):
@@ -43,7 +36,8 @@ def index(request):
     else:
         form = UserForm()
     files=FileUpload.objects.all()
-    return render(request, 'index.html', {'form': form,'files':files})
+    # return render(request, 'index.html', {'form': form,'files':files})
+    return redirect(request,'index.html',{'form':form,'files':files})
 
 def visualizer(request, **kwargs):
     return render(request, 'visualization.html')

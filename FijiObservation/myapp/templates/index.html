@@ -13,18 +13,20 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="banner">
-        <h1>
-            Welcome to Fiji Observation project
-        </h1>
-        <p>Behind every weather forecast, every early warning of life-threatening hazards, and every long-term climate change projection are observational data.</p>
-
-        <button type="button" class="btn btn-primary btn-lg" a href="#user-upload">Get started</button>
-
-
-        <img class="img-banner" src="">
-    </div>
+    
     <div class="container">
+
+        <div class="banner">
+            <h1>
+                Welcome to Fiji Observation project
+            </h1>
+            <p>Behind every weather forecast, every early warning of life-threatening hazards, and every long-term climate change projection are observational data.</p>
+    
+            <button type="button" class="btn btn-primary btn-lg" a href="#user-upload">Get started</button>
+    
+    
+            <img class="img-banner" src="">
+        </div>
     
         <div class="user-upload" id="user-upload" >
             <form action ="/" method="POST" enctype="multipart/form-data">
@@ -40,18 +42,30 @@
             {% endfor %}
         </div>
 
-        <p>See all my files</p>
+   
 
-        {% for doc in files %}
+ 
+<style>
+    .visualize-me{
+        margin-top: 15px;
+        text-align: center;
+    }
+</style>
 
-        <li>{{doc}}</li>
+        <div class="visualize-me"> 
+            <a href="{{'visualizer'}}">Visualize me!</a>
+            <select>
+                <label>Which data do you want to visualize</label>
+                {% for doc in files %}
+                
+                <option value="{{doc}}">{{doc}}</option>
 
-        {% endfor %}
-
-
-
-
-        <button class="btn btn-primary visualizer" a href="{% url 'visualizer' %}>visualize me!</p>"> visualize me!</button>
+                {% if doc is None %}
+                <option value>None</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+       </div>
    </div>
 </body>
 
