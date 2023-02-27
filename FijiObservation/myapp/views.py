@@ -6,6 +6,7 @@ import pandas as pd
 # Create your views here.
 
 
+
 def index(request):
     #validate the form
     if request.method == 'POST':
@@ -14,11 +15,21 @@ def index(request):
             #read the file from request
             file = request.FILES['file']
             #display a message after the file is successfully uploaded
+
+            
             created_file=FileUpload.objects.create(file=file)
+
+            #save the uploaded file to the database
             created_file.save()
             
             messages.success(request, 'File uploaded successfully')
             
+            return redirect('/')
+        
+            '''
+             after read the csv file or xls
+             then dump the file into the database
+            '''
 
             if file.name.endswith('.csv'):
 
@@ -37,7 +48,16 @@ def index(request):
         form = UserForm()
     files=FileUpload.objects.all()
     # return render(request, 'index.html', {'form': form,'files':files})
-    return redirect(request,'index.html',{'form':form,'files':files})
+
+    #get the csv and dump into json or dictionary in python
+
+    
+    return render(request,'index.html',{'form':form,'files':files})
 
 def visualizer(request, **kwargs):
     return render(request, 'visualization.html')
+
+
+def get_file_from_database(request):
+
+    pass

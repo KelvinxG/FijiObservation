@@ -4,18 +4,25 @@ Functionality
 [✓] create a form for the user to upload a file
 [✓] store a file in the system (database)
     [] get a file's name
-[×]visualize a data in chart
-    [] select which file to visualize
+        file=request.FILES['files']
+       -->file.name 
+[✓]visualize a data in chart
+    [✓] select which file to visualize
     [] display multiple kind of graphs
+    [] use javascript to read from the csv file -> Traditional way
+    [] use python django to pass the data and dump into the context -> use django
 
-Design / UI
+
+Design / UI -> this should be the last thing to do on this list
+
 
 [✓] Banner unifished but getting started
+
 
 Configuration
 
 [✓] change database to postgres
-    [] connect to postgres
-    [] migrate to postgres
+    [✓] connect to postgres
+    [✓] migrate to postgres
 [✓] .envfile
 
