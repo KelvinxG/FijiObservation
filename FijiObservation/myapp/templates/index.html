@@ -61,12 +61,14 @@
                 <label>Which data do you want to visualize</label>
                 {% for doc in files %}
                 
-                <option value="{{doc}}">{{doc}}</option>
+                <option value="{{doc.name}}">{{doc.name}}</option>
 
                 {% if doc is None %}
                 <option value>None</option>
                 {% endif %}
                 {% endfor %}
+
+
             </select>
        </div>
    </div>

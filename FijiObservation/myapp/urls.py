@@ -8,4 +8,6 @@ urlpatterns= [
 
     path('',views.index,name='index'),
     path('visualizer/',views.visualizer,name='visualizer'),
+    path('aboutauthor/',views.aboutauthor,name='aboutauthor'),
+    path('solutions/',views.solutions,name='solutions'),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -15,14 +15,17 @@ def index(request):
         if form.is_valid():
             #read the file from request
             file = request.FILES['file']
+            read_file=file.read()
+
             #display a message after the file is successfully uploaded
 
             
-            created_file=FileUpload.objects.create(file=file)
+            created_file=FileUpload.objects.create(file=file) #FileUpload Model
 
-            #save the uploaded file to the database
+            #save the uploaded file to the database #FileUpload model saved
             created_file.save()
-
+            
+           
             
             
             messages.success(request, 'File uploaded successfully')
@@ -49,18 +52,26 @@ def index(request):
             form.add_error(None, 'Please select a file')
     else:
         form = UserForm()
+    file_dict={} #create an empty dict
+
+    for filename,file in request.FILES.items():
+        file_dict[filename] = file
     files=FileUpload.objects.all()
     # return render(request, 'index.html', {'form': form,'files':files})
 
     #get the csv and dump into json or dictionary in python
 
     
-    return render(request,'index.html',{'form':form,'files':files})
+    return render(request,'index.html',{'form':form,'files':files,'file_dict':file_dict})
 
 def visualizer(request, **kwargs):
     return render(request, 'visualization.html')
 
+def aboutauthor(request, **kwargs):
+    return render(request,'aboutauthor.html')
 
+def solutions(request, **kwargs):
+    return render(request,'solutions.html')
 def get_file_from_database(request):
 
     pass

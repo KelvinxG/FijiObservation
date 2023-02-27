@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions</title>
+</head>
+<body>
+
+    <style>
+        body{
+  background-color:#e7e7e7;
+}
+
+
+.btncolor{
+  background-color: #b923ff;
+  border-radius: 55555px;
+  padding: 1rem 2rem!important;
+  color: #ffff;
+  margin-bottom: 2rem;
+  
+}
+
+
+.package{
+  list-style-type: none;
+}
+
+.pricing{
+ padding-left: 1.5rem;
+}
+
+.parent{
+  height: 300px;
+  display: flex;
+  border:2px solid yellow;
+}
+
+.child{
+  background-color: red;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+.icon-color
+{
+  color:#1f38fa;
+
+}
+    </style>
+    
+    <div class="container mt-5">
+        <div class="row">
+    
+    
+          <div class="col-lg-4 col-md-6 mb-3">
+            <div class="card py-4 px-lg-5 h-100">
+              <div class="card-body d-flex flex-column">
+                <div class="text-center">
+                  <img src="https://drive.google.com/uc?export=view&id=1HswgEjS9kRoAKUDOMmDhnhUyyah7wBW9" class="img-fluid  mb-5" alt="Websearch">
+                </div>
+    
+                <div class="card-title mb-4 text-center fs-2">Personal Package</div>
+                <div class="pricing">
+                  <ul class="list-unstyled">
+                    <li class="mb-3">
+                      <i class="fas fa-check-circle icon-color"></i>
+                      <span class="small ms-3">1 Member Only</span>
+                    </li>
+                    <li class="mb-3">
+                      <i class="fas fa-check-circle icon-color"></i>
+                      <span class="small ms-3">Available Storage 100GB</span>
+                    </li>
+                  </ul>
+    
+    
+                </div>
+                <div class="text-center mt-auto mb-4">
+                  <span class="fw-bold fs-2 ">$7</span>/month
+                </div>
+                <div class="text-center"><button type="button" class="btn btncolor">Choose Plan</button></div>
+    
+              </div>
+            </div>
+    
+          </div>
+    
+    
+          <div class="col-lg-4 col-md-6 mb-3">
+            <div class="card py-4 px-lg-5 h-100">
+              <div class="card-body d-flex flex-column">
+                <div class="text-center">
+                  <img src="https://drive.google.com/uc?export=view&id=1HswgEjS9kRoAKUDOMmDhnhUyyah7wBW9" class="img-fluid  mb-5" alt="Websearch">
+                </div>
+    
+                <div class="card-title mb-4 text-center fs-2">Partner Package</div>
+                <div class="pricing">
+                  <ul class="list-unstyled">
+                    <li class="mb-3">
+                      <i class="fas fa-check-circle icon-color"></i>
+                      <span class="small ms-3">2-3 Members</span>
+                    </li>
+                    <li class="mb-3">
+                      <i class="fas fa-check-circle icon-color"></i>
+                      <span class="small ms-3">Available Storage 500GB</span>
+                    </li>
+                    <li class="mb-3">
+                      <i class="fas fa-check-circle icon-color"></i>
+                      <span class="small ms-3">Free Hosting</span>
+                    </li>
+                  </ul>
+    
+    
+                </div>
+                <div class="text-center mt-auto mb-4">
+                  <span class="fw-bold fs-2 ">$11</span>/month
+                </div>
+                <div class="text-center"><button type="button" class="btn btncolor">Choose Plan</button></div>
+    
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 mb-3">
+            <div class="card py-4 px-lg-5 h-100">
+              <div class="card-body d-flex flex-column">
+                <div class="text-center">
+                  <img src="https://drive.google.com/uc?export=view&id=1HswgEjS9kRoAKUDOMmDhnhUyyah7wBW9" class="img-fluid  mb-5" alt="Websearch">
+                </div>
+    
+                <div class="card-title mb-4 text-center fs-2">Team Package</div>
+                <div class="pricing">
+                  <ul class="list-unstyled">
+                    <li class="mb-3">
+                      <i class="fas fa-check-circle icon-color"></i>
+                      <span class="small ms-3">4-7 Members</span>
+                    </li>
+                    <li class="mb-3">
+                      <i class="fas fa-check-circle icon-color"></i>
+                      <span class="small ms-3">Available Storage 2TB</span>
+                    </li>
+                    <li class="mb-3">
+                      <i class="fas fa-check-circle icon-color"></i>
+                      <span class="small ms-3">Free Hosting</span>
+                    </li>
+                    <li class="mb-3">
+                      <i class="fas fa-check-circle icon-color"></i>
+                      <span class="small ms-3">Free Domains</span>
+                    </li>
+                  </ul>
+    
+    
+                </div>
+                <div class="text-center mt-auto mb-4">
+                  <span class="fw-bold fs-2 ">$15</span>/month
+                </div>
+                <div class="text-center"><button type="button" class="btn btncolor">Choose Plan</button></div>
+    
+              </div>
+            </div>
+          </div>
+    
+    
+        </div>
+      </div>
+</body>
+</html>
+{% endblock %}
