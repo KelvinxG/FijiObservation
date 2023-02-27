@@ -10,4 +10,5 @@ urlpatterns= [
     path('visualizer/',views.visualizer,name='visualizer'),
     path('aboutauthor/',views.aboutauthor,name='aboutauthor'),
     path('solutions/',views.solutions,name='solutions'),
+    path('contact/',views.contact,name='contact'),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

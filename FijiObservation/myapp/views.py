@@ -16,6 +16,7 @@ def index(request):
             #read the file from request
             file = request.FILES['file']
             read_file=file.read()
+            print(read_file)
 
             #display a message after the file is successfully uploaded
 
@@ -53,7 +54,7 @@ def index(request):
     else:
         form = UserForm()
     file_dict={} #create an empty dict
-
+    
     for filename,file in request.FILES.items():
         file_dict[filename] = file
     files=FileUpload.objects.all()
@@ -72,6 +73,9 @@ def aboutauthor(request, **kwargs):
 
 def solutions(request, **kwargs):
     return render(request,'solutions.html')
+
+def contact(request, **kwargs):
+    return render(request,'contact.html')
 def get_file_from_database(request):
 
     pass

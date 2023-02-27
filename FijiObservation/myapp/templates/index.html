@@ -10,23 +10,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+
+    <link rel="stylesheet" href="{% static 'styles/theme.css' %}">
     <title>Document</title>
 </head>
 <body>
+        
     
     <div class="container">
 
-        <div class="banner">
-            <h1>
-                Welcome to Fiji Observation project
-            </h1>
-            <p>Behind every weather forecast, every early warning of life-threatening hazards, and every long-term climate change projection are observational data.</p>
-    
-            <button type="button" class="btn btn-primary btn-lg" a href="#user-upload">Get started</button>
-    
-    
-            <img class="img-banner" src="">
-        </div>
+
+
+        <!--
+
+            test
+        -->
+
+
+
+
+        <div class="row d-flex align-items-center justify-content-center py-vh-5">
+            <div class="col-12 col-xl-10">
+              <span class="h5 text-secondary fw-lighter">Hello,world</span>
+              <h1 class="display-huge mt-3 mb-3 lh-1"> Welcome to Fiji Observation project</h1>
+            </div>
+            <div class="col-12 col-xl-8">
+              <p class="lead text-secondary">Behind every weather forecast, every early warning of life-threatening hazards, and every long-term climate change projection are observational data.</p>
+            </div>
+            <div class="col-12 text-center">
+              <a href="#" class="btn btn-xl btn-light">Let's go!
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+
+
+
+
+
+        <!--ends here-->
+
     
         <div class="user-upload" id="user-upload" >
             <form action ="/" method="POST" enctype="multipart/form-data">
@@ -61,13 +87,16 @@
                 <label>Which data do you want to visualize</label>
                 {% for doc in files %}
                 
-                <option value="{{doc.name}}">{{doc.name}}</option>
+                <option value="{{doc}}">{{doc}}</option>
+
+                <p>{{doc.files.name}}</p>
 
                 {% if doc is None %}
                 <option value>None</option>
                 {% endif %}
                 {% endfor %}
-
+ 
+              
 
             </select>
        </div>
