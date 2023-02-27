@@ -37,6 +37,12 @@
       margin:5px;
       border-radius: 80px;
     }
+    .menus{
+      background-color: rgb(207, 156, 255);
+      min-height: auto;
+      width: 100%;
+      margin-bottom: 150px;
+    }
   </style>
   
 
@@ -51,12 +57,12 @@
         <div id="container"></div>
         <!--ends here-->
       </div>
-      <div class="col-sm">
+      <div class="col-sm menus">
              <!-- Vertical menus-->
            
              <div class="row">
               <div class="col-sm">
-                <p>MAPS</p>
+                <h5>Charts</h5>
                 <div class="btn-group-vertical">
                     <button class="btn btn-primary temp" type ="button">Temperature</button>
                     <button class="btn btn-primary precip" type ="button">Precipitation</button>
@@ -65,7 +71,13 @@
                 </div>
               </div>
               <div class="col-sm">
-                <p>Description</p>
+                <h5>Description</h5>
+                <div class="btn-group-vertical">
+                  <button class="btn btn-primary temp" type ="button">Temperature desc</button>
+                  <button class="btn btn-primary precip" type ="button">Precipitation desc</button>
+                  <button class="btn btn-primary drought" type ="button">Drought desc</button>
+                  <button class="btn btn-primary outlook" type ="button">Outlook desc</button>
+                </div>
 
               </div>
              </div>

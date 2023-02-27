@@ -3,6 +3,7 @@ from .forms import UserForm
 from .models import Parameter,Observation,Station,FileUpload
 from django.contrib import messages
 import pandas as pd
+import csv
 # Create your views here.
 
 
@@ -21,6 +22,8 @@ def index(request):
 
             #save the uploaded file to the database
             created_file.save()
+
+            
             
             messages.success(request, 'File uploaded successfully')
             
