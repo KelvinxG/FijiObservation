@@ -3,12 +3,6 @@ from django.core.validators import ValidationError
 from .models import Parameter,Observation,Station
 import os
 class UserForm(forms.Form):
-    class Meta:
-        widgets={
-            'file':forms.FileInput(attrs={
-            'multiple':True,
-            })
-        }
     file=forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple':True}))
     def clean_file(self):
         file = self.cleaned_data.get('file')
