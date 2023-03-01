@@ -19,7 +19,7 @@ class IndexView(View):
                 #read the file from request
                 file = request.FILES['file']
                 read_file=file.read()
-                print(read_file)
+
 
                 #display a message after the file is successfully uploaded
 
@@ -68,15 +68,19 @@ class IndexView(View):
         
         return render(request,'index.html',{'form':form,'files':files,'file_dict':file_dict})
 
-def visualizer(request, **kwargs):
-    context={'data':'test'}
-    return render(request, 'visualization.html',context=context)
+class VisualizerView(View):
+    def get(request, **kwargs):
+        context={'data':'test'}
+        return render(request, 'visualization.html',context=context)
 
-def aboutauthor(request, **kwargs):
-    return render(request,'aboutauthor.html')
+class AboutAuthorView(View):
+    def get(request, **kwargs):
+        return render(request,'aboutauthor.html')
 
-def solutions(request, **kwargs):
-    return render(request,'solutions.html')
+class SolutionView(View):
+    def get(request, **kwargs):
+        return render(request,'solutions.html')
 
-def contact(request, **kwargs):
-    return render(request,'contact.html')
+class ContactView(View):
+    def get(request, **kwargs):
+        return render(request,'contact.html')

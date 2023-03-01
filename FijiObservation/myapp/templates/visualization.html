@@ -99,6 +99,13 @@
     Fiji Observation
   </h1>
   <div class="container">
+
+    <p>
+       {% for data in context %}
+      <li>{{data}}</li>
+
+      {% endfor%}
+    </p>
     <div class="row">
       <div class="col-sm">
         <!-- Chart Or Visualization -->
