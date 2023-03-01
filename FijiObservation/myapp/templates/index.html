@@ -54,20 +54,32 @@
         <!--ends here-->
 
     
-        <div class="user-upload" id="user-upload" >
+        <div class="mb-3" >
             <form action ="/" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{form.as_p}}
-                <label>Upload your files </label>
-                <p>upload your csv or excel file </p>
-                <button type="submit">upload my file</button>
+    
+             
+                    <label for="formFile" class="form-label">Upload your files</label>
+                    <p>upload your csv or excel file </p>
+                    <!-- <input class="form-control" type="file" id="formFile"> -->
+                
+                  <button type="submit">upload my file</button>
             </form>
 
             {% for message in messages %}
-                {{message}}
+               <div class="alert alert-primary" role="alert" > 
+                     {{message}}
+               </div>
             {% endfor %}
         </div>
 
+
+         <div>
+            {% for data in read_file %}
+                 <li>{{data}}</li>
+            {% endfor %}
+         </div>
    
 
  
@@ -86,14 +98,14 @@
             <select>
                 <label>Which data do you want to visualize</label>
                 {% for doc in files %}
-                
-                <option value="{{doc}}">{{doc}}</option>
-
-                <p>{{doc.files.name}}</p>
-
                 {% if doc is None %}
                 <option value>None</option>
-                {% endif %}
+                {% else %}
+                <option value="{{doc}}">{{doc}}</option>
+                 
+                <p>{{doc.files.name}}</p>
+                {% endif%}
+             
                 {% endfor %}
  
               
@@ -101,6 +113,17 @@
             </select>
        </div>
    </div>
+
+   <script>
+    $(function(){
+    $("input[type='submit']").click(function(){
+        var $fileUpload = $("input[type='file']");
+        if (parseInt($fileUpload.get(0).files.length)>5){
+         alert("You can only upload a maximum of 5 files");
+        }
+    });    
+});​
+   </script>
 </body>
 
 
